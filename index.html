@@ -35,9 +35,14 @@
 </header>
 <section id = "showcase">
 <div class = "container">
-<h1> Welcome  </h1>
+<h1> Profile </h1>
 <hr>
-<p> Welcome to my portfolio. Im a Computer Science Student and a member of freecodecamp.com. While I study computer science at WGU, I try to gain more coding skills through freeCodeCamp. My journy to become a computer scientist is like any other person that enjoys codeing and createing new projects.  </p>
+<p> There was a time when my family called me "the destroyer" because my curiosity would entice me to dismantle objects. 
+Now, I do completely the opposite; it is intriguing for me to try and fix anything I can. In the process I learn various different things.
+I had this site for more than six months and I'm still adding, deleting or fixing my code. Recently, I fixed my files to download in Github 
+so feel free to check them out.
+ </p>
+
 </div>
 </section>
 
@@ -46,21 +51,25 @@
 <h2>Latest Projects</h2>
 
 <div class = "box">
-<img src = "https://user-images.githubusercontent.com/20764455/59562827-2820d080-8fe6-11e9-8d9c-57602faa1e0b.gif">
-
+<a href ="https://github.com/GKARLOZ/Crazy-Mario">
+<img src = "https://user-images.githubusercontent.com/20764455/59562827-2820d080-8fe6-11e9-8d9c-57602faa1e0b.gif" class="imageJava" >
+</a>
 <h3> Mario BrickBraker</h3>
 <p> Mario needs to brake all the bricks to win.Made with Java code. </p>
  </div>
 <div class = "box">
-<img src = "https://user-images.githubusercontent.com/20764455/59562828-2820d080-8fe6-11e9-96e9-e834f2a0cb1b.gif">
-<h3> MarioTrain</h3>
-<p> Mario trys to get Bowser and get all the points he can. Made with Java code. </p>
+<a href="https://github.com/GKARLOZ/Fly-Mario-FLY">
+<img src = "https://user-images.githubusercontent.com/20764455/59562828-2820d080-8fe6-11e9-96e9-e834f2a0cb1b.gif" class="imageJava" >
+</a>
+<h3> Flying Mario</h3>
+<p> Mario tries to get Bowser.Made with Java code. </p>
 </div>
+
 <div class = "box">
 <img src = "https://user-images.githubusercontent.com/20764455/59562180-4f739f80-8fde-11e9-9e96-a1bff33bcb5c.gif">
 
 <h3> HTML </h3>
-<p> No finished but it is a web site about.... </p>
+<p> Not finished </p>
 
 </div>
 
@@ -81,8 +90,7 @@
 <hr>
 
 <p>
- Html is probably the first languege i learn thru a website called freecodecamp.com before i decided to be Computer Scientist. My portfolio is an example of my current skills in html and im still trying to gain more knowlegde.
- </p>
+For the moment, this portfolio is my main html project. I am aware this site needs improvements; which is why, I try to do it in my free time.   </p>
  </div>
 </div>
 </section>
@@ -98,23 +106,59 @@
 <div class="javaWords">
 <h1> Java  </h1>
 <hr>
-<p> Java is currently the languege I use the most. I learned Object Oriented with this languege and made some games to demostrate my knowlegde. </p>
-<div class="projectImg">
-  
-  <a href ="https://github.com/GKARLOZ/Mario-Brick-Breaker">
+<p> My Java projects were the most enjoyable to create. It was intriguing to watch my code successfully work as a whole and make it work the way it was intended to. Both Mario projects and a few of my college projects use object oriented programming. </p>
+
+ <div class="projectImg">
+  <a href="https://github.com/GKARLOZ/Java-CollegeProjects">
+<img src= "collegeBackpack.png" class="imageJava">
+  </a>
+</div>
+
+  <div class="projectImg">
+  <a href ="https://github.com/GKARLOZ/Crazy-Mario">
 <img   src= "https://user-images.githubusercontent.com/20764455/59562827-2820d080-8fe6-11e9-8d9c-57602faa1e0b.gif" class="imageJava" >
   </a>
+  </div>
+  
+  <div class = "projectImg">
   <a href="https://github.com/GKARLOZ/Fly-Mario-FLY">
 <img src= "https://user-images.githubusercontent.com/20764455/59562828-2820d080-8fe6-11e9-96e9-e834f2a0cb1b.gif" class="imageJava">
   </a>
+  </div>
+  
+ 
 </div>
 </div>
+</section>
+
+
+<section id="showProjectsThree">
+<div class="container">
+
+<img src= "c++.png" >
+
+
+<div class="moveRight">
+<h1>C++</h1>
+<hr>
+
+<p>
+Many of my C++ projects are assigments from my C++ class in college. The objective was to learn how to make loops,switches and if-else statements. Also, in the process of every project, I was to avoid spaghetti code and design it in a comprehensive matter.</p>
+ 
+ <div class="projectImg">
+  <a href="https://github.com/GKARLOZ/C-plus-plus-">
+<img src= "collegeBackpack.png" class="imageJava">
+  </a>
+</div>
+ 
+ </div>
 </div>
 </section>
 
 
 <footer id="footer">
 <p > Gian's Portfolio, Copyright &copy; 2019 </p>
+<p> Contact me</p>
    <nav>
      <ul>
      <li> <a href="https://github.com/GKARLOZ"><i class="fa fa-github"></i></li>
@@ -124,6 +168,8 @@
        <li><a href="https://codepen.io/mars71/"> <i class="fa fa-instagram"></i></li> 
        
      <li><a href="https://www.freecodecamp.org/gian_mars"> <i class="fa fa-free-code-camp"></i></li>
+     
+       <li><a href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/"> <i class="fa fa-linkedin"></i></li>
    
      </ul>
      
@@ -223,8 +269,13 @@ header a{
 
  header #branding h1 img{
 	border-bottom: #000000 3px solid ;
-	border-radius:50%;
-   width:60px;
+	border-radius:60%;
+   width:50px;
+    animation: mymove 20s infinite;/* this animation makes your img on the header move */
+    
+}
+@keyframes mymove {  /*  makes the header img move */ 
+  50% {transform: rotate(180deg);}
 
 }
 
@@ -270,27 +321,29 @@ header a:hover{
 /* showcase */
 
  #showcase{
+
  min-height:400px;
  
- background:url('https://user-images.githubusercontent.com/20764455/59718029-126dff80-91ce-11e9-9fff-b57d5d5a051f.jpg') no-repeat 0px 0px   ; /* -400px will move the position of the imaging displayed*/ 
+ background: url('CSwallpaper.jpg');        /*url('https://user-images.githubusercontent.com/20764455/59718029-126dff80-91ce-11e9-9fff-b57d5d5a051f.jpg') no-repeat 0px 0px; /*-400px will move the position of the imaging displayed*/ 
 background-size: 100%; 
-width:100%;
+ width:100%;
  text-align:center;
- color:#c2d6d6;
- border-bottom: #ffffff 5px solid;
-
- background-opacity:.3;
+ color:white;
+ border-bottom: #ffffff 7px solid; 
+ background-opacity:.2;
  }
 
+ 
  #showcase h1{
  margin-top:100px;
- font-size: 55px;
+ font-size: 70px;
  margin-bottom: 10px;
  
  }
  
  #showcase p{
  font-size:30px;
+ font-color:white;
  }
  /*showProjects*/
  
@@ -322,7 +375,7 @@ width:100%;
  
 
 #showProjectsTwo img{
-	float:left;
+	float:right;
 	padding:30px;
 	width:25%;
 	color:black;
@@ -339,15 +392,27 @@ width:100%;
  float:right;
  
  }
+ #showProjectsTwo {
+  border-bottom: #000000 10px solid;
+ 
+  
+ 
+ }
+ 
  
  #showProjectsTwo .projectImg img{
-	
+ 
 	border-radius:20%;
 	border: 10px solid;
 	padding:0px;
-	margin-right:20px;
+	margin-right:10px;
     margin-top:20px;
+    margin-bottom:20px;
+    
     border-color:#8BAFAD;
+    width:250px;
+    height:250px;
+    
    
 }
   .imageJava{
@@ -356,9 +421,11 @@ width:100%;
    transition:.5s ease;
    
   }
-  
+  /*-------------------------------------------------------Testing img hover-------------------------------------------------------------------*/
   a:hover .imageJava{
+  
     opacity:.7;
+    
   
   } 
   
@@ -395,14 +462,50 @@ border-bottom: #ffffff 5px solid;
  #boxes .box img{
  width: 200px;
  border-radius:50%;
-	
  }
  
  
+ /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+ 
+  #showProjectsThree {
+ background:#008080;
+ border-bottom: #000000 10px solid;
+  
+ }
+ 
+
+#showProjectsThree img{
+	float:left;
+	padding:50px;
+	width:30%;		
+}
+
+
+
+ 
+ #showProjectsThree .moveRight  {
+ font-size:30px;
+ }
+ 
+ #showProjectsThree .projectImg img{
+ 
+	border-radius:20%;
+	border: 10px solid;
+	padding:0px;
+	margin-right:10px;
+    margin-top:20px;
+        margin-bottom:20px;
+    
+    border-color:#8BAFAD;
+    width:250px;
+    height:250px;
+    }
+    
+    
  
  footer{
  padding:20px;
- margin-top:20px;
+ margin-top:0px;
 text-align:center;
  color:#ffffff;
  background-color:#8BAFAD;
