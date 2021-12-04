@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gian's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/IndexStyle.css">
+        
+        
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo">                   
+               <!--  <img src="img/devjane.png" alt="">  -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="myProjects.html" class="nav__link">My Projects</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#experience" class="nav__link">Experience</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Introduction --------------------------------------------------------------------------------------------------------------------->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Gian Bustos</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Senior Computer Science Student</p>
+            <img src="img\CS-gian-01.png" alt="a picture of Jane Smith smiling" class="intro__img"> 
+        </section>
+        
+          <!--Projects Section------------------------------------------------------------------------------------------------------------------>
+        <section class="project " id="project">
+            <h2 class="section__title section__title--project">Projects</h2>
+            <div class="project-row">   
+                <div class="project_item item1">              
+                    <img src="img\Java.png" alt="Java logo" class="project__img1">
+                    <br><h3 class="section__title section__title--item">Scheduling Desktop App</h3>
+                    <ul class="project-item2-List">                               
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                        <li><strong>Localization API and Date/Time API</strong><br>
+                            Applies the localization API and data/time API in application development to 
+                            support end-users in various geographical regions.</li>    
+                         <li><strong>Lambda</strong><br>
+                          Lambda expressions in application development
+                         to meet bsiness requrements more efficiently.</li>
+                         <li><strong>Collections</strong><br>
+                          Streams and filters in application development 
+                          to manipulate data more efficiently.</li>
+                          <li><strong>Database and File Server Applications</strong><br>
+                             Advanced Java programming language to meet business
+                             requirements using database and file server applications.</li>                     
+                    </ul> 
+                    <a href="SchedulingProject.html" class="btn-item btn1">Learn More</a>                   
+                </div>  
+                <div class="project_item item2">              
+                    <img src="img\python-logo.png" alt="Java logo" class="project__img2">
+                    <br><h3 class="section__title section__title--item">WGUPS Routing Program</h3>
+                    <ul class="project-item2-List">                               
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                            <li><strong>Hashing Algorithms and Structures</strong><br>
+                            Using hashing techniques within an application to perform searching operations.</li>
+                            <li><strong>Dictionaries and Sets</strong><br>
+                            Dictionaries and sets in order to organize data into key-value pairs.</li> 
+                            <li><strong>Self-Adjusting Data Structures</strong><br>
+                                By evaluating the space and time complexity of  the self-adjusting data structure using big-o notation
+                            to improve the performance of the application.</li>  
+                            <li><strong>Self-Adjusting Heuristics</strong><br>
+                                Self-adjusting heuristics to improve the performance of the application.</li> 
+                                        
+                    </ul>  
+                    <a href="WGUPSproject.html" class="btn-item btn2">Learn More</a>                  
+                </div>  
+                <div class="project_item item3 "  >                          
+                    <img src="img\Java.png" alt="Java logo" class="project__img1">
+                   <br> <h3 class="section__title section__title--item">Inventory Management System</h3>
+                    <ul class="project-item2-List">                               
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                            <li><strong>Object-Oriented Principles</strong><br>
+                                Object-oriented design principles in developing applications for 
+                                ensuring the application's scalability.</li>  
+                            <li><strong>Classes and Interfaces</strong><br>
+                                Designed the software solutions with appropriate classes, objects, methods, and interfces. </li> 
+                            <li><strong>Application Development</strong><br>
+                                Produced application using Java programming language constructs to meet business requirements. </li>                           
+                    </ul>  
+                    <a href="InventoryManagementSystem.html" class="btn-item btn3">Learn More</a>                                               
+                </div> 
+            </div> 
+            <a href="myProjects.html" class="btn">My Projects</a>              
+        </section>
+        
+        <!-- About me --------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who I am</h2>
+           <p class="section__subtitle section__subtitle--about">Software Engineer</p>
+           <div class="about-me__body">
+               <p>My name is Giancarlo Bustos. I am a senior Computer Science student with professional experience in web design. 
+                   Thanks to my problem-solving skills, my last internship lead to my current position as a web designer. Created
+                    complex coding projects using OOP, algorithms, and data structures. Fluent in Spanish and English with excellent
+                     communication and interpersonal skills. Strong work ethics in a team or individual setting.  </p>
+               <p></p>
+           </div>  
+           <img src="img\CS-gian-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+      
+          <!--Experience Section----------------------------------------------------------------------------------------------------------------------------------------------------------->
+         <section class="experience" id="experience">
+            <h2 class="section__title section__title--experience">Experience</h2>
+            <div class="experience-row">
+                <div class="experience_item1 ">
+                    <h4 class="section__title section__title--item1">Websites</h4>
+                    <a href="https://www.enterthefullcourse.com/">
+                        <img src="img\ETFC-logo.png" alt="Jane leaning against a bus" class="experience__img1-1">
+                    </a>
+                    <a href="https://www.icecreamdreamisland.com/">
+                         <img src="img\Dream-logo.png" alt="Jane leaning against a bus" class="experience__img1-2">
+                    </a>
+                    <a href="https://www.ctaeshowcase.org/">
+                         <img src="img\CTAE-logo.png" alt="Jane leaning against a bus" class="experience__img1-3">
+                    </a>
+                </div>
+                <div class="experience_item2">              
+                    <img src="img\upg-logo.png" alt="Jane leaning against a bus" class="experience__img">
+                    <h4 class="section__title section__title--item">-REMOTE-</h4>
+                    <p class="section__subtitle section__subtitle--item">Web Designer</p>
+                    <ul class="item2-List">    
+                        <li>Design and manage websites using Wordpress</li>
+                        <li>Incorporating functionalitites and features into websites</li>
+                        <li>Ensuring high-performance and availability and managing all technical aspects of the CMS</li>
+                        <li>Collaborate with members of a creative team</li>
+                        <li>Troubleshoot and resolve website problems for clients and co-workers</li>
+                        <li>producing sample sites</li>
+                        <li>Stay abreast of new development is software, trends, and practices</li>
+                    </ul>
+                </div>   
+                <div class="experience_item3">
+
+
+                    <img src="img\Jerone(Linkedin).jpg" alt="Jane leaning against a bus" class="experience__img3">
+                    <h3 class="section__title section__title--item3">Jerone Dodd Jr</h3>
+                    <h6 class="section__title section__title--item">Executive Director</h6>
+                    <div class="experience-me__body">
+                        <p>"Gian showed adaptability in problem solving and has maintained professional service and etiquette throughout. 
+                            He was able to develop WordPress CMS and integrate online shops on the websites..." 
+                    </div>
+                    <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>                   
+                </div>                     
+            </div>          
+        </section>
+
+        
+        <!-- Footer ------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:gianbustos04@gmail.com" class="footer__link">GianBustos04@gmail.com</a>
+            <ul class="social-list">
+                
+                <li class="social-list__item">
+                    <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GKARLOZ">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io/mars71/pens/public">
+                        <i class="fab fa-codepen"></i>
+
+
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>

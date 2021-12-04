@@ -1,0 +1,830 @@
+
+
+
+
+
+*,
+*::before,
+*::after {  /* customize the width and padding easier*/
+    box-sizing: border-box;
+}
+
+:root {
+    /* font family*/
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+    --ff-thidly:'Tangerine';
+    
+    
+
+    /*font weight*/
+    --fw-reg: 400;
+    --fw-bold: 900;
+
+    /* color */
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    /*--clr-accent: #16e0bd;*/
+    --clr-accent: #fff;
+
+    /*font size*/
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.15rem;
+    --fs-body: 1rem;
+
+    /* box shadow for the img*/
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+
+    
+    
+}
+
+
+
+/* media quary*/
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 5.5rem;
+        --fs-h2: 4.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.325rem;
+    }
+}
+
+/* General styles */
+
+html {
+    scroll-behavior: smooth;/* this will make the scroll down smooth when closing the nav*/
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+/*avoid touching the edge of the screen*/
+section {
+    padding: 5em 2em;
+}
+
+
+/* good practice to add this in order to avoid problems with the images*/
+img {
+    display: block;
+    max-width: 100%;/* 100 so it doesnt grow bigger and overflow of their parents*/
+}
+
+strong{ font-weight: var(--fw-bold);}
+
+
+:focus {
+    outline: 3px solid var(--clr-accent);/* this will give a focus on button and links etc*/
+    outline-offset: 3px;
+}
+/* Typography */
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-dark);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+   
+    
+    
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+   
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    transform: translateX(100%);/* this will make the menu go to the right and u wont see it anymore*/
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;/* this will set it as a column*/
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);/* this will make the nav appear when clicked*/
+}
+
+.nav-open .nav-toggle{
+
+    position: fixed;/* this will make the button stay in the same position when clicked*/
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);/* this wil make the button rotate when clicked*/
+}
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);/* this will make the button turn to an x and the translateX sets the button look like an x*/
+}
+
+
+.nav-open .hamburger::after {
+   
+    opacity: 0;
+}
+
+
+.hamburger {
+    display: block;
+    position: relative;
+  
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: red;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;/* display or position is also required*/
+    left: 0;
+    right: 0;
+    
+   
+    
+
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+/*  Intro section  */
+
+.intro {
+    position: relative;
+    max-width: 1500px;
+   
+    
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+    display: inline-block;
+    color:var(--clr-light);
+    font-family: var(--ff-thidly);
+    font-size: 44px;
+    
+}
+
+/* This content will modify when a 600px screen is used*/
+@media (min-width: 600px) {
+    .intro {
+        display: grid;/* makes a grid in the intro section */
+        width: min-content;/* the grid will have min */
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: /*this will divide the areas of the text*/
+            "img title"/*first is the image then the title*/
+            "img subtitle";/*first the image then the subtitle*/
+        grid-template-columns: min-content max-content;/* this will create two columns, max will maximize the size*/
+    }
+    
+    .intro__img {
+        grid-area: img;/*this places the img in the grid*/
+        min-width: 350px;
+        position: relative;/* making it relative let the image go on top of the green bar*/
+        z-index: 2;
+    }    
+    
+    .section__subtitle--intro {
+        align-self: start;/*aviods the green bar from strecting up */
+        grid-column: -1 / 1;/* this will stretch across the grid*/
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);/* this will make the bar be 100%width plus 1.5 so it could go out of the grid*/
+        
+    }
+}
+
+/* about me*/
+.about-me {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+    max-width: 300px;
+    
+    
+    
+}
+
+.section__subtitle--about{
+    color: var(--clr-light);   
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;/*If you dont understand, check the intro section in this file*/
+        grid-template-columns: 1fr 400px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .section__subtitle--about {
+        grid-column: 1 / -1;/* from one side all the way to the other side*/
+        grid-row: 2;/*keep it in the right place*/
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+        
+       
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+
+/* projects Section */
+
+
+
+.project{
+    background-color: var(--clr-dark);/*IF A IMAGE FAILS TO LOAD*/
+    background-image: url(../img/codBlack.jpg);
+    background-size: cover;/*COVER SO IT NEVER REPEATS INSELF*/
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+    overflow: hidden;/* keeps the image in the same location */    
+}
+
+.project p{
+
+    color: black;
+    
+}
+
+
+.section__title--project{
+
+    color: var(--clr-light);
+  
+}
+.section__title--item{
+
+    color: var(--clr-dark);
+  
+}
+.section__itemName{
+
+    text-align: center;
+    
+}
+.section__subtitle--project{
+
+    color: var(--clr-dark);
+}
+
+
+.section__title--project::after {/* THE PSUDO element after will make a line appear after the section title */
+    content: '';/* every psudo element needs to have content of it wont work*/
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: .5em auto 2em;
+   /* background: var(--clr-light);*/
+    background:var(--clr-light);/* current color will give you the color of the element that it did after*/
+    
+}
+.project-row {
+    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+  
+  grid-column-gap:15px;
+  max-width: 1300px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+  margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/ 
+  
+  
+}
+
+.section__subtitle--project {
+    color: black;
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+/*------------------------Modified code --------------------------------*/
+
+  .project_item1 .section__title--project{
+      color: white;
+      margin-bottom: -10%;
+      
+  }
+
+
+  
+
+  
+/* middle item*/
+
+.project_item {
+
+   
+    padding: 1rem; 
+    box-shadow: -1px 15px 30px -12px rgb(243, 241, 241);
+    border-radius: 0.9rem;
+    background-color: white;
+    color: var(--text);
+    cursor: pointer;
+    
+    
+  }
+
+
+.project__img{
+    width: auto;
+    height: auto;
+    margin: -50% auto -40% auto;
+    padding: 10%;
+}
+.project__img1{
+
+    width: 36%;
+    height: auto;
+    margin: -35% auto -10%;
+    padding: 10%;
+}
+.project__img2{
+
+    width: 100%;
+    height: auto;
+    margin: -40% auto -10% ;
+    padding: 10%;
+}
+
+
+.section__subtitle--project{
+    color: var(--clr-dark); 
+     
+}
+
+
+.project-item2-List{
+
+    color:black;
+    text-align: left;
+    font-size: 20px;
+    
+   
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;/* always captilize*/
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);/*This will make the button bigger when hovered*/
+}
+.btn-item {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;/* always captilize*/
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    
+}
+
+.btn-item:hover {
+    transform: scale(1.1);/*This will make the button bigger when hovered*/
+}
+.btn2{
+
+    margin-top: 11%;
+}
+.btn3{
+
+    margin-top: 27%;
+}
+
+@media screen {
+
+    .project-row{
+
+        width: auto;
+    }
+    .project_item{
+
+        width:auto;
+        height: auto;
+        margin: 50px auto;
+    }
+    
+   
+      
+    
+}
+
+@media(max-width:850px) {
+   
+    .project_item{
+        margin-top: 10%;
+    }
+   
+   
+    .project_item ul{
+
+        font-size: small;
+        text-align: left;
+    }
+
+    .item1, .item3 {
+
+        display: none;
+    }
+      
+    
+    
+}
+
+/*experience section */
+.experience {
+    background-color: var(--clr-dark);/*IF A IMAGE FAILS TO LOAD*/
+    background-image: url(../img/pexels-phot01.jpeg);
+    background-size: cover;/*COVER SO IT NEVER REPEATS INSELF*/
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+    overflow: hidden;/* keeps the image in the same location */    
+}
+
+.experience p{
+
+    color: black;
+    
+}
+.experience_item3 p{
+    font-style: italic;
+    font-size: medium;
+}
+.section__title--experience{
+
+    color: var(--clr-light);
+}
+
+.section__title--item{
+
+    color: var(--clr-dark);
+}
+.section__title--item3{
+
+    color: var(--clr-dark);
+    margin-bottom: -5%;
+    font-size: x-large;
+}
+
+.section__title--experience::after {/* THE PSUDO element after will make a line appear after the section title */
+    content: '';/* every psudo element needs to have content of it wont work*/
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: .5em auto 2em;
+   /* background: var(--clr-light);*/
+    background:var(--clr-light);/* current color will give you the color of the element that it did after*/
+    
+}
+.experience-row {
+    
+  display: grid;
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/ /* automatic sets 3 columnn,auto fits the pics*/
+  grid-template-columns: auto auto auto;
+  grid-column-gap:10px;
+  max-width: 1200px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+  margin: 0 auto 1%  ;/* 1% TO avoid touching the botton 26% to center the row*/
+  
+  
+}
+
+.section__subtitle--experience {
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+/*------------------------Modified code --------------------------------*/
+
+
+  .experience_item1 {
+   
+    cursor: pointer;
+    
+    margin: auto;
+    
+    
+    
+  }
+
+
+
+  .experience_item1 .section__title--item{
+      color: white;
+      margin-bottom: -10%;
+      
+  }
+
+
+  .experience_item3 {
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    box-shadow: -1px 15px 30px -12px rgb(243, 241, 241);
+    border-radius: 0.9rem;
+    background-color: white;
+    color: var(--text);
+    cursor: pointer;
+    margin: auto;
+    margin-left: 10%;
+    
+
+    
+    
+  }
+
+  
+/* middle item*/
+
+.experience_item2 {
+
+   
+    padding: 1rem; 
+    
+    height: auto;
+    box-shadow: -1px 15px 30px -12px rgb(243, 241, 241);
+    border-radius: 0.9rem;
+    background-color: white;
+    color: var(--text);
+    cursor: pointer;
+    z-index: 3;  
+  }
+
+
+.experience__img {
+    width: auto;
+    height: auto;
+    margin: -50% auto -40% auto;
+    padding: 10%;
+}
+
+.section__subtitle--experience{
+    color: var(--clr-dark); 
+
+}
+
+.experience__img3{
+    margin: -20% auto 5% auto;
+    border-radius: 50%;
+    
+}
+.experience__img1-1, .experience__img1-2, .experience__img1-3{
+    padding: 5%;
+    max-width:50%;
+    margin-left: 50%;
+    
+}
+.experience__img1-1:hover, 
+.experience__img1-2:hover,
+.experience__img1-3:hover,
+.social-list-experience:hover{
+    opacity: .5;
+    transform: scale(1.2);
+    
+}
+
+
+
+.section__title--item1{
+
+    margin-left: 50%;
+}
+
+.item2-List{
+
+    color:black;
+    text-align: left;
+    font-size: 20px;
+    
+   
+}
+
+@media screen {
+
+    .experience-row{
+
+        width: auto;
+    }
+    .experience_item2{
+
+        width: calc( 100% + 1em);
+        margin: auto;
+    }
+    
+   
+      
+    
+}
+
+@media(max-width:850px) {
+   
+    
+    .experience_item1{
+
+        display: none;
+    }
+    .experience_item3{
+        display:none;       
+    }
+   
+    .experience_item2 ul{
+
+        font-size: small;
+        text-align: left;
+    }
+        
+    
+}
+/*footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;/* no bullets*/
+    display: flex;/* to pick the icon next to each other*/
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+
+
+
+  

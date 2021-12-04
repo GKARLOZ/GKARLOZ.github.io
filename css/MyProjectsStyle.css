@@ -1,0 +1,842 @@
+
+
+*,
+*::before,
+*::after {  /* customize the width and padding easier*/
+    box-sizing: border-box;
+}
+
+:root {
+    /* font family*/
+    
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+    --ff-thidly:'Tangerine';
+   
+    
+    
+
+    /*font weight*/
+    --fw-reg: 400;
+    --fw-bold: 900;
+
+    /* color */
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    /*--clr-accent: #16e0bd;*/
+    --clr-accent: #fff;
+
+    /*font size*/
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.15rem;
+    --fs-body: 1rem;
+
+    /* box shadow for the img*/
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+
+    
+    
+}
+
+
+
+/* media quary*/
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 5.5rem;
+        --fs-h2: 4.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.725rem;
+    }
+}
+
+/* General styles */
+
+html {
+    scroll-behavior: smooth;/* this will make the scroll down smooth when closing the nav*/
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+/*avoid touching the edge of the screen*/
+section {
+    padding: 5em 2em;
+}
+
+
+/* good practice to add this in order to avoid problems with the images*/
+img {
+    display: block;
+    max-width: 100%;/* 100 so it doesnt grow bigger and overflow of their parents*/
+}
+
+strong{ font-weight: var(--fw-bold);}
+
+
+:focus {
+    outline: 3px solid var(--clr-accent);/* this will give a focus on button and links etc*/
+    outline-offset: 3px;
+}
+/* Typography */
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-dark);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+   
+    
+    
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+   
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    transform: translateX(100%);/* this will make the menu go to the right and u wont see it anymore*/
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;/* this will set it as a column*/
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);/* this will make the nav appear when clicked*/
+}
+
+.nav-open .nav-toggle{
+
+    position: fixed;/* this will make the button stay in the same position when clicked*/
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);/* this wil make the button rotate when clicked*/
+}
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);/* this will make the button turn to an x and the translateX sets the button look like an x*/
+}
+
+
+.nav-open .hamburger::after {
+   
+    opacity: 0;
+}
+
+
+.hamburger {
+    display: block;
+    position: relative;
+  
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: red;
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;/* display or position is also required*/
+    left: 0;
+    right: 0;
+    
+   
+    
+
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+/*footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;/* no bullets*/
+    display: flex;/* to pick the icon next to each other*/
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
+}
+
+
+/* projects Section------------------------------------------------------------------------------------------------------------------ */
+
+
+
+.project{
+    background-color: var(--clr-dark);/*IF A IMAGE FAILS TO LOAD*/
+    background-image: url(../img/codBlack.jpg);
+    background-size: cover;/*COVER SO IT NEVER REPEATS INSELF*/
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+    overflow: hidden;/* keeps the image in the same location */   
+     
+}
+.introProject {
+    position: relative;
+    max-width: 800px;
+    height:500px
+   
+    
+}
+.introProject{
+    display: grid;/* makes a grid in the intro section */
+    width: min-content;/* the grid will have min */
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas:  
+         
+         "img subtitle";/*first the image then the subtitle*/
+    grid-template-columns: min-content max-content;/* this will create two columns, max will maximize the size*/
+}
+
+.project-intro {
+    align-self: center;/*aviods the green bar from strecting up */
+    grid-column: -1 / 1;/* this will stretch across the grid*/
+    grid-row: 1;
+    text-align: right;
+    position: relative;
+   
+    width: calc(100% + 1.5em);/* this will make the bar be 100%width plus 1.5 so it could go out of the grid*/
+    
+}
+
+.project-carousel{
+
+    display: none;/* tHIS WILL AVOID THE CAROUSEL FROM APPEARING IN 850 SCREEN OF BIGGER*/
+}
+
+/* row------------------------------------------------------------------------------------------------------- */
+
+.project-row {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+    grid-column-gap:15px;
+    max-width: 1300px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+    margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/ 
+    
+    
+  }
+.CCollege-row{
+  
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+      grid-column-gap:15px;
+      max-width: 1000px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+      margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/
+  
+  
+  }
+.web-design-row{
+  
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+      grid-column-gap:15px;
+      max-width: 800px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+      margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/ 
+      
+  }
+.project-carousel-row {
+      
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+      
+      grid-column-gap:15px;
+      max-width: 500px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+      margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/ 
+      
+      
+    }
+
+/*----------------- Titles subtitles p ... -------------------------------------------------*/
+.project-item2-List{
+
+    color:black;
+    text-align: left;
+    font-size:20px
+    
+   
+}
+
+.section__subtitle--project{
+    color: var(--clr-dark); 
+     
+}
+.section__subtitle--intro{
+    display: inline-block;
+    color:var(--clr-light);
+    font-family: var(--ff-thidly);
+    font-size: var(--fs-h1)
+    
+}
+
+.project p{
+
+    color: black;
+    
+}
+
+
+.section__title--project{
+
+    color: var(--clr-light);
+  
+}
+.section__title--item{
+
+    color: var(--clr-dark);
+    
+    margin-bottom: 5%;
+  
+}
+.first-Title{
+    font-size: x-large;
+}
+.section__itemName{
+
+    text-align: center;
+    
+}
+.section__subtitle--project{
+
+    color: var(--clr-dark);
+}
+
+
+.section__title--project::after {/* THE PSUDO element after will make a line appear after the section title */
+    content: '';/* every psudo element needs to have content of it wont work*/
+    display: block;
+    width: 7em;
+    height: 1px;
+    margin: .5em auto 2em;
+   /* background: var(--clr-light);*/
+    background:var(--clr-light);/* current color will give you the color of the element that it did after*/
+    
+}
+
+.section__subtitle--project {
+    color: black;
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+
+/*------------------------Modified code --------------------------------*/
+
+.project_intro__img{
+
+    grid-area: img;/*this places the img in the grid*/
+    min-width: 350px;
+    position: relative;/* making it relative let the image go on top of the green bar*/
+    z-index: 2;
+    margin-top: -25%;
+    margin-left: -70%;
+    
+    
+
+}
+
+.project_item1 .section__title--project{
+      color: white;
+      margin-bottom: -10%;
+      
+  }
+
+
+  
+
+  
+/* middle item*/
+
+.project_item {
+
+   
+    padding: 1rem; 
+    box-shadow: -1px 15px 30px -12px rgb(243, 241, 241);
+    border-radius: 0.9rem;
+    background-color: white;
+    color: var(--text);
+    cursor: pointer;
+   
+    
+  }
+
+/* icon */
+
+.intro-icon-div{
+    margin-top: 20px;
+ 
+ }
+ .intro-icon{
+     font-size: 44px;
+     color: #000;
+ 
+ }
+ 
+ .intro-icon:hover{
+     opacity:.6;
+     transform: scale(1.2);
+ 
+ }
+
+
+
+/*img -------------------------------------------------------------------------------*/
+.project__img{
+    width: auto;
+    height: auto;
+    margin: -50% auto -40% auto;
+    padding: 10%;
+}
+.project__img1{
+
+    width: 36%;
+    height: auto;
+    margin: -35% auto -10%;
+    padding: 10%;
+}
+.project__img2{
+
+    width: 100%;
+    height: auto;
+    margin: -40% auto -10% ;
+    padding: 10%;
+}
+.project__img2-cpp{
+
+    width: 50%;
+    height: auto;
+    margin: -30% auto -10% ;
+    padding: 10%;
+}
+.project__img_html{
+
+    width: 80%;
+    height: auto;
+    margin: -30% auto -10% ;
+    padding: 10%;
+}
+.gameGif{
+
+    width:30%;
+    border-radius: 50%;
+    border-color: silver;
+    border: 4ch;
+    margin: auto;
+    z-index: 2;
+    
+   
+}
+
+
+.project-game-hover-img{
+    margin-top: 20%;
+}
+.project-game-hover-img:hover .gameHoverImg{
+    opacity: 1;
+    transition:.5s ease;
+
+}
+
+
+.project-game-hover-img:hover .gameGif{
+    opacity: .1;
+    transition:.5s ease;
+}
+
+.gameHoverImg{
+    
+    color: black;
+    font-size: 50px; 
+    transform: translate(-0%, -150%);
+    opacity: 0;  
+      
+}
+
+.image-row img{
+
+    width: 10%;
+}
+
+.web-design-row img{
+
+    padding: 20%;
+}
+
+.webDesignLogo:hover{
+
+    transform: scale(1.3);
+
+
+
+}
+/*-------------------------------------------------*/
+
+
+
+
+
+/* Buttons-------------------------------------------------------------------------------------- */
+
+.btn-item {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;/* always captilize*/
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    
+}
+
+.btn-item:hover {
+    transform: scale(1.1);/*This will make the button bigger when hovered*/
+}
+
+/*--------------------------------media screen-------------------------------------------------------------------*/
+@media screen {
+
+    .project-carousel-row{
+
+        width: auto;
+        height:fit-content;
+        
+    }
+
+    .project-row{
+
+        width: auto;
+    }
+
+    .project_item{
+
+        width:auto;
+        height: auto;
+        margin: 70px auto;
+    }
+    
+    .project_carousel_item{
+
+        width:auto;
+        height: 650px;
+        margin: 70px auto;
+    }
+   
+      
+    
+}
+
+
+
+
+/*--------------850----------------------------------------------------------------*/
+
+@media(max-width:850px) {
+
+    .project-item2-List{
+
+        
+        font-size:10px
+        
+       
+    }
+
+    .introProject{  
+        height: auto;
+    }
+
+    .project_intro__img{   
+        display: none;
+    }
+
+    .project-intro{
+        font-size:xx-large;   
+        text-align: center;
+       
+    }
+
+    
+ 
+    .projectSectionOne{
+        display: none;
+    }
+
+    .section__title--carousel{
+        color: black;
+        font-size: large;
+
+    }
+
+    .section-title-carousel{
+        color:white;
+        font-size: x-large;
+        margin: auto;
+
+    }
+
+    .container{
+
+        background-color: transparent;
+        
+    }
+
+    .project-carousel{
+
+    display:block;
+    background-color: var(--clr-dark);/*IF A IMAGE FAILS TO LOAD*/
+    background-image: url(../img/codBlack.jpg);
+    background-size: cover;/*COVER SO IT NEVER REPEATS INSELF*/
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+    overflow: hidden;/* keeps the image in the same location */   
+
+     }
+
+    
+
+    .carousel-control{
+
+        background-color:white;
+        margin: auto;
+        height:max-content;
+        color:white;
+     }
+
+    .project_carousel_item {
+
+   
+        padding: 1rem; 
+        box-shadow: -1px 15px 30px -12px rgb(126, 121, 121);
+        border-radius: 0.9rem;
+        background-color: white;
+        color: var(--text);
+        cursor: pointer;
+        
+        
+      }
+    .project_carousel_webDesign{
+
+        padding: 6rem; 
+        border-radius: 0.9rem;
+        color: var(--text);
+        cursor: pointer;
+        margin: auto;
+        
+        
+      }
+
+    .project-carousel-row {
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automatic sets 3 columnn,auto fits the pics*/
+        height: auto;
+        grid-column-gap:15px;
+        max-width: 500px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+        margin: 0 auto 1%  ;/* 1% TO avoid touching the botton*/ 
+        background-color:transparent;
+        
+      }
+    .wgu-row-carousel{
+
+        height: 700px;
+      }
+    
+    .webD-row-carousel{
+
+        height: 400px;
+
+    }
+    
+
+    .project_item{
+        margin-top: 10%;
+    }
+    .project_carousel_item{
+
+        width:auto;
+        height: auto;
+        margin: 10%;
+    }
+   
+   
+    .project_carousel_item ul{
+
+        font-size: small;
+        text-align: left;
+    }
+     
+    .project_item ul{
+
+        font-size: small;
+        text-align: left;
+
+    }
+    .project__img1, .project__img2{
+       
+        margin: -10% auto auto auto;
+        padding: 10%;
+    }
+    .project__img2-cpp{
+
+        width: 50%;
+        height: auto;
+        margin: -5% auto;
+        padding: 10%;
+    }
+    .gameGif{
+        display: none;
+    }
+    .gameHoverImg{
+        color: black;
+        font-size: 30px; 
+        transform: translate(0%, 0%);
+        opacity: 1; 
+        
+    }
+      
+    
+    
+}/* end of media 850px*/
+
