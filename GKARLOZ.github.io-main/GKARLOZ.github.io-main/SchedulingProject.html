@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gian's Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/wgupsStyle.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+               
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="myProjects.html" class="nav__link">My Projects</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#experience" class="nav__link">Experience</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                <strong>Scheduling App</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Class: Software Development ll </p>
+            <img src="img\scheduling-custrec-im2.png" alt="image" class="intro__img">
+        </section>
+        <div class="intro-icon-div">
+            <a  href="https://github.com/GKARLOZ/Scheduling-Desktop-Application-WGU-SoftwareDevTwon">
+               <i class="fab fa-github intro-icon"></i>
+            </a>
+        </div>
+        <div class="portfolio-item-individual">
+            <p>The main goal of the scheduling application is to let the user store appointments in the most efficient way possible while
+                 making it easy to understand for the user. This program connects to an Oracle database that will verify the password on the login screen;
+                  also store any changes made in the program. Implementing localization and date/time APIs in the program will automatically update the time 
+                  to the user's localization. 
+
+                This application was created with Scene Builder for the graphical user interface and coded in NetBeans IDE. The database was modified using MySQL workbench.<br><br> 
+                ####### If you would like to try it, the user name is "test" and password is "test"########<br><br>
+                <img src="img\scheduling-login-img.png" alt="image" class="intro__img"> 
+                
+                
+                <br>The login form is the first part of this application.<br>
+                • accepts a user ID and password and provides an appropriate error message<br>
+                • determines the user’s location (i.e., ZoneId) and displays it in a  label on the log-in form<br>
+                 • displays the log-in form in English or French based on the user’s computer language setting to translate all the text,
+                  labels, buttons, and errors on the form.<br>
+                • automatically translates error control messages into English or French based on the user’s computer language setting.<br><br>
+                
+
+                <img src="img\scheduling-custrec-im2.png" alt="image" class="intro__img"><br>
+                
+                
+                The rest of the program has the following functionalities:<br>
+                
+                • Customer records and appointments can be added, updated, and deleted.<br>
+                - Customer IDs are auto-generated, and first-level division (i.e., states, provinces) and country data are collected using separate combo boxes.<br>
+                 
+                - When updating a customer, the customer data auto-populates in the form.<br>
+                 
+                • Country and first-level division data is prepopulated in separate combo boxes or lists in the user interface for the user to choose. The first-level list should be filtered by the user’s selection of a country (e.g., when choosing U.S., filter so it only shows states).
+                <br>• All of the original customer information is displayed on the update form.
+                <br> - Customer_ID must be disabled.
+                <br>• All of the fields can be updated except for Customer_ID.
+                <br>• Customer data is displayed using a TableView, including first-level division data. A list of all the customers and their information may be viewed in a TableView, and updates of the data can be performed in text fields on the form.
+                <br> • When a customer record is deleted, a custom message should display in the user interface.<br><br>
+
+                <img src="img\scheduling-add.png" alt="image" class="intro__img">
+                
+                <br>Code that enables the user to add, update, and delete appointments. 
+                <br> • A contact name is assigned to an appointment using a drop-down menu or combo box.
+                <br>• A custom message is displayed in the user interface with the Appointment_ID and type of appointment canceled.
+                <br>• The Appointment_ID is auto-generated and disabled throughout the application.
+                <br>• When adding and updating an appointment, record the following data: Appointment_ID, title, description, location, contact, type, start date and time, end date and time, Customer_ID, and User_ID.
+                <br>• All of the original appointment information is displayed on the update form in local time zone.
+                <br>• All of the appointment fields can be updated except Appointment_ID, which must be disabled.
+                 
+                
+                <br><br>Code to implement input validation and logical error checks to prevent each of the following changes when adding or updating information; displays a custom message specific for each error check in the user interface:
+                <br>• scheduling an appointment outside of business hours defined as 8:00 a.m. to 10:00 p.m. EST, including weekends
+                <br>• scheduling overlapping appointments for customers
+                <br>• entering an incorrect username and password<br><br>
+                 
+                <img src="img\scheduling-record.png" alt="image" class="intro__img">
+
+                <br><br>.Code to provide an alert when there is an appointment within 15 minutes of the user’s log-in. A custom message should be displayed in the user 
+                interface and include the appointment ID, date, and time. If the user does not have any appointments within 15 minutes of logging in, a custom message is 
+                displayed in the user interface indicating there are no upcoming appointments.
+                
+                 
+                <br><br>  AT LEAST Two different lambda expressions to improve the code.
+                 
+                <br><br>Code that provides the ability to track user activity by recording all user log-in attempts, dates, and time stamps and whether each attempt 
+                was successful in a file named login_activity.txt.<br><br>
+
+                <img src="img\scheduling-dataTimeCode.png" alt="image" class="intro__img">
+                
+                <br> <br> <strong> Opinion: </strong>
+                
+                <br>This project took me some time to finish but it was easy to get it done. I already had some experience using Scene Builder and writing in Java. 
+                The most difficult requirement was implementing the date/time functionalities. Since this was my first project using data/time APIs, it was difficult 
+                to figure out how to convert my local time to the user's local time. Apparently, I needed to get the localization of the user and convert the local time to 
+                UTC time and then to the user's local time. Once I understood the process, it was just a matter of time to get it done. Another requirement that gave me a 
+                hard time was the overlap issue. I had created code that could detect if the user accidentally scheduled an appointment that overlaps with another appointment.
+                 Solving this challenge was probably the most enjoyable part of this project. I enjoyed designing the GUI but solving problems that make me think is the fun
+                  part.  
+
+                </p>
+            
+           
+        </div>
+         
+        
+        
+        <!-- Footer ------------------------------------------------------------------------------------------------------------------------------------------------------------->
+       <footer class="footer">
+        <!-- replace with your own email address -->
+        <a href="mailto:gianbustos04@gmail.com" class="footer__link">gianbustos04@gmail.com</a>
+        <ul class="social-list">
+            
+            <li class="social-list__item">
+                <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/GKARLOZ">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
