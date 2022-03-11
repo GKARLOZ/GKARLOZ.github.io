@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gian's Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="css/IndexStyle.css">
+        
+        
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo">                   
+               <!--  <img src="img/devjane.png" alt="">  -->
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="myProjects.html" class="nav__link">My Projects</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#experience" class="nav__link">Experience</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Introduction --------------------------------------------------------------------------------------------------------------------->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Gian Bustos</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Senior Computer Science Student</p>
+            <img src="img\CS-gian-01.png" alt="a picture of Jane Smith smiling" class="intro__img"> 
+        </section>
+        
+          <!--Projects Section------------------------------------------------------------------------------------------------------------------>
+        <section class="project " id="project">
+            <h2 class="section__title section__title--project">Main Projects</h2>
+            <div class="project-row">   
+                <div class="project_item item1">              
+                    <img src="img\Java.png" alt="Java logo" class="project__img1">
+                    <br><h3 class="section__title section__title--item">Scheduling App</h3>
+                    <ul class="project-item2-List">                         
+                        <h4 class="section__title section__title--item">Class: Software ll <br> Advanced Java Concepts</h4>
+                        
+                        <p> This application lets the user create Appointment objects (OOP) and store 
+                            them in a relational database. Localization and Date/Time APIs were used 
+                            to automatically change the time of the appointments depending on the 
+                            location of the user. Utilized SceneBuilder to create the GUI to have 
+                            tables and buttons</p>
+
+                        <br>
+                        <br>
+                        <br>
+                    
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                        <li><strong>Localization API and Date/Time API</strong><br></li>    
+                        <li><strong>Lambda</strong><br></li>
+                        <li><strong>Collections (Streams and Filters)</strong><br></li>
+                        <li><strong>Database and File Server Applications</strong><br></li>                     
+                    </ul> 
+                    <a href="SchedulingProject.html" class="btn-item btn1">Learn More</a>                   
+                </div>  
+                <div class="project_item item2">              
+                    <img src="img\python-logo.png" alt="Java logo" class="project__img2">
+                    <br><h3 class="section__title section__title--item">Routing Program</h3>
+                    <ul class="project-item2-List">
+                        <h4 class="section__title section__title--item">Class: Data Structures and Algorithms ll </h4>
+                        
+                        <p> 
+                            This project required research of different algorithms and data structures to design a program that
+                             will load trucks with specific packages and assign the drivers a route. The algorithm used to create
+                              the route is called the Nearest Neighbor algorithm and the other algorithm to separate the packages 
+                              based on requirements is a similar greedy algorithm. A hash table was implemented into the program 
+                              to store the packages. 
+                        </p>                               
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                            <li><strong>Hashing Algorithms and Structures</strong><br></li>
+                            <li><strong>Dictionaries and Sets</strong><br></li> 
+                            <li><strong>Self-Adjusting Data Structures</strong><br></li>  
+                            <li><strong>Self-Adjusting Heuristics</strong><br></li> 
+                                        
+                    </ul>  
+                    <a href="WGUPSproject.html" class="btn-item btn2">Learn More</a>                  
+                </div>  
+                <div class="project_item item3 "  >                          
+                    <img src="img\Java.png" alt="Java logo" class="project__img1">
+                   <br> <h3 class="section__title section__title--item">Inventory Management System</h3>
+                    <ul class="project-item2-List">     
+                        <h4 class="section__title section__title--item">Class: Software l<br> Java Concepts</h4>
+                        
+                        <p> This application lets the user create Product and Part objects(OOP). Since every part needs to 
+                            have certain variables, an abstract Part class was created. For that reason, the Part class was
+                             extended in the inHouse and Outsourced concrete classes, inheriting the methods from the Part class. 
+                             The abstract Part class requires the id, name, price, stock, min, and max which are added in the 
+                             constructor.
+                        </p>
+                                              
+                        <h4 class="section__title section__title--item">Competencies:</h4>
+                            <li><strong>Object-Oriented Principles</strong><br></li>  
+                            <li><strong>Classes and Interfaces</strong><br> </li> 
+                            <li><strong>Application Development</strong><br> </li> 
+                            <li><strong>Exception Handling</strong><br> </li> 
+                                                  
+                    </ul>  
+                    <a href="InventoryManagementSystem.html" class="btn-item btn2">Learn More</a>
+                                                                  
+                </div> 
+            </div> 
+            <a href="myProjects.html" class="btn">All Projects</a>              
+        </section>
+        
+        <!-- About me --------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who I am</h2>
+           <p class="section__subtitle section__subtitle--about">Software Engineer</p>
+           <div class="about-me__body">
+                                   
+               
+                <p>My name is Giancarlo Bustos. I am a senior Computer Science student with professional experience in web design. 
+                    Thanks to my problem-solving skills, my last internship lead to my current position as a web designer. Created
+                     complex coding projects using OOP, algorithms, and data structures. Fluent in Spanish and English with excellent
+                      communication and interpersonal skills. Strong work ethics in a team or individual setting.  </p>
+           </div>
+           <img src="img\CS-gian-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+        
+      
+          <!--Experience Section----------------------------------------------------------------------------------------------------------------------------------------------------------->
+         <section class="experience" id="experience">
+            <h2 class="section__title section__title--experience">Experience</h2>
+            <div class="experience-row">
+                <div class="experience_item1 ">
+                    <h4 class="section__title section__title--item1">Websites</h4>
+                    <a href="https://www.enterthefullcourse.com/">
+                        <img src="img\ETFC-logo.png" alt="Jane leaning against a bus" class="experience__img1-1">
+                    </a>
+                    <a href="https://www.icecreamdreamisland.com/">
+                         <img src="img\Dream-logo.png" alt="Jane leaning against a bus" class="experience__img1-2">
+                    </a>
+                    <a href="https://www.ctaeshowcase.org/">
+                         <img src="img\CTAE-logo.png" alt="Jane leaning against a bus" class="experience__img1-3">
+                    </a>
+                </div>
+                <div class="experience_item2">              
+                    <img src="img\upg-logo.png" alt="Jane leaning against a bus" class="experience__img">
+                    <h4 class="section__title section__title--item">-REMOTE-</h4>
+                    <p class="section__subtitle section__subtitle--item">Web Designer</p>
+                    <ul class="item2-List">    
+                        <li>Design and manage websites using Wordpress</li>
+                        <li>Incorporating functionalitites and features into websites</li>
+                        <li>Ensuring high-performance and availability and managing all technical aspects of the CMS</li>
+                        <li>Collaborate with members of a creative team</li>
+                        <li>Troubleshoot and resolve website problems for clients and co-workers</li>
+                        <li>producing sample sites</li>
+                        <li>Stay abreast of new development is software, trends, and practices</li>
+                    </ul>
+                </div>   
+                <div class="experience_item3">
+
+
+                    <img src="img\Jerone(Linkedin).jpg" alt="Jane leaning against a bus" class="experience__img3">
+                    <h3 class="section__title section__title--item3">Jerone Dodd Jr</h3>
+                    <h6 class="section__title section__title--item">Executive Director</h6>
+                    <div class="experience-me__body">
+                        <p>"Gian showed adaptability in problem solving and has maintained professional service and etiquette throughout. 
+                            He was able to develop WordPress CMS and integrate online shops on the websites..." 
+                    </div>
+                    <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>                   
+                </div>                     
+            </div>          
+        </section>
+
+        
+        <!-- Footer ------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:gianbustos04@gmail.com" class="footer__link">GianBustos04@gmail.com</a>
+            <ul class="social-list">
+                
+                <li class="social-list__item">
+                    <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/GKARLOZ">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io/mars71/pens/public">
+                        <i class="fab fa-codepen"></i>
+
+
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
