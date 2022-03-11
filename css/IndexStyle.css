@@ -354,6 +354,36 @@ header {
     }
 }
 
+/*about me subsection*/
+
+.about-me_sub {
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: medium;
+    
+}
+
+
+
+
+@media (min-width:1000px){
+
+    .about-me_li {
+        margin-top: -200px;
+        display: grid;/*If you dont understand, check the intro section in this file*/
+        grid-template-columns: 1fr 400px;
+        grid-template-areas: 
+            "title title title"
+            "list  list  list";
+        grid-column-gap: 2em;
+        text-align: left;
+    }
+   
+
+
+}
+
 
 
 /* projects Section */
