@@ -304,8 +304,9 @@ header {
 
 /* about me*/
 .about-me {
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
+
 }
 
 .about-me__img {
@@ -319,6 +320,14 @@ header {
 .section__subtitle--about{
     color: var(--clr-light);   
 }
+
+.about-me_li2{
+       
+    margin-left:auto;
+   
+
+}
+
 
 @media (min-width: 600px) {
     .about-me {
@@ -346,14 +355,16 @@ header {
         
        
     }
+  
     
     .about-me__img {
         grid-area: img;
         position: relative;
         z-index: 2;
     }
-}
 
+   
+}
 /*about me subsection*/
 
 .about-me_sub {
@@ -361,7 +372,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     font-size: medium;
-   
+    
     
 }
 
@@ -384,6 +395,10 @@ header {
 
 
 }
+
+
+   
+
 
 
 
@@ -455,6 +470,11 @@ header {
     color: black;
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
+}
+
+.project li{
+
+    font-size: medium;
 }
 /*------------------------Modified code --------------------------------*/
 
