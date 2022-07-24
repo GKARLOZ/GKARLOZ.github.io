@@ -317,6 +317,7 @@ header {
     
 }
 
+
 .section__subtitle--about{
     color: var(--clr-light);   
 }
@@ -745,7 +746,47 @@ header {
     z-index: 3;  
   }
 
+/* Bstock experience section*/
 
+.experience-row0 {
+    
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/ /* automatic sets 3 columnn,auto fits the pics*/
+    grid-template-columns: auto;
+    grid-column-gap:10px;
+    max-width: 500px;/* This will give the grid a max of 1300 incase the website is seen in big screens*/
+    margin: 0 auto 11%   ;/* 1% TO avoid touching the botton 26% to center the row*/
+    
+    
+  }
+
+
+.experience_item0 {
+
+   
+    padding: 1rem; 
+    
+    height: auto;
+    width: auto;
+    box-shadow: -1px 15px 30px -12px rgb(243, 241, 241);
+    border-radius: 0.9rem;
+    background-color: white;
+    color: var(--text);
+    cursor: pointer;
+    z-index: 3;  
+  }
+
+  .experience__img0 {
+    width: auto;
+    height: auto;
+    margin: -28% auto -70% auto;
+    padding: 10%;
+}
+
+
+
+
+/*End of bstock experience section*/
 .experience__img {
     width: auto;
     height: auto;
@@ -822,6 +863,7 @@ header {
         display:none;       
     }
    
+    .experience_item0 ul,
     .experience_item2 ul{
 
         font-size: small;
