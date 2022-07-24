@@ -536,8 +536,9 @@ header {
 
     width: 100%;
     height: auto;
-    margin: -40% auto -10% ;
-    padding: 10%;
+    margin: -40% auto -20% ;
+    padding: 20%;
+    
 }
 .project__img2-cpp{
 
