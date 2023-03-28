@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Gian - Portfolio</title>
+  <meta name="title" content="Gian - Portfolio">
+  <meta name="description" content="This is a personal portfolio html template inspired by codewithsadee">
+
+  <!-- 
+    - favicon
+  -->
+  
+  <link rel="shortcut icon" href="./favicon.svg" type= "image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font/font.css">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="/assets/images/gianProfPic.jpg">
+  <link rel="preload" as="image" href="/assets/images/hero-shape-1.png">
+  <link rel="preload" as="image" href="/assets/images/hero-shape-2.png">
+
+</head>
+
+
+
+
+
+<body id="top">
+    
+
+ <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+       <h1>Gian´s Portfolio</h1>
+        <!-- <img src="./assets/images/logo.svg" width="84" height="26" alt="logo"> -->
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src= "./assets/images/logo.svg" width="84" height="26" alt="logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="assets\Experience\experience.html" class="navbar-link" data-nav-link>Experience</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="/assets/Projects/projects.html" class="navbar-link" data-nav-link>Project</a>
+          </li>
+
+          <li>
+            <a href="#review" class="navbar-link" data-nav-link>Review</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn:hover">
+        <span class="span">Get A Quote</span>
+
+        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+      </a>
+
+      <button class="nav-open-btn btn:hover" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+
+    </div>
+  </header>
+
+
+     <!-- 
+        - #PROJECTS
+      -->
+
+      <section class="section project" aria-label="my latest projects" id="project">
+
+        <ul class="slider-list">
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Mario, Java Game</p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title">Mario Breaking Bricks </a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Front End Development & Maintenance" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Desktop App, Java </p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title"> Scheduling application </a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Desktop App, Java</p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title"> Inventory Management System</a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+
+    </section>
+
+
+       <!-- 
+        - #PROJECTS
+      -->
+
+    <section class="section project " aria-label="my latest projects" id="project">
+
+        <ul class="slider-list">
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Mario, Java Game</p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title">Mario Breaking Bricks </a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Front End Development & Maintenance" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Desktop App, Java </p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title"> Scheduling application </a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="slider-item">
+            <div class="project-card text-center">
+
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
+
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Desktop App, Java</p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title"> Inventory Management System</a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+        </ul>
+
+    </section>
+
+
+ <!-- 
+    - #CUSTOM CURSOR
+  -->
+
+  <div class="cursor-dot" data-cursor></div>
+  <div class="cursor-outline" data-cursor></div>
+
+
+
+<!-- 
+    - custom js link
+  -->
+  <script src="/assets/js/script.js"> </script>
+
+</body>
+
+</html>
+ 
+
+
+
