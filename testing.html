@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+
+  <!-- Include the Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+  <!-- Include the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include the Owl Carousel JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <!-- Initialize the Owl Carousel in your JavaScript code -->
+  <script>
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        // responsive:{
+        //   0:{
+        //       items:1
+        //   },
+        //   768:{
+        //       items:2
+        //   },
+        //   992:{
+        //       items:3
+        //   }
+        // }
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <!-- Add your carousel HTML code here -->
+  <div class="owl-carousel">
+    <div class="item"><img src="assets\images\fly_mario_homepage.png"></div>
+    <div class="item"><img src="assets\images\fly_mario_homepage.png"></div>
+    <div class="item"><img src="assets\images\fly_mario_homepage.png"></div>
+  </div>
+</body>
+</html>
