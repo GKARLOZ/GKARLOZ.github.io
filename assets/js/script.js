@@ -161,17 +161,85 @@ addEventOnElements(hoveredElements, "mouseout", function () {
 });
 
 
-//Carousel
+// Testimonials Carousel 
 $(document).ready(function(){
-  $('.owl-carousel').owlCarousel({
-    items: 1,
+  $('.owl-testimonials').owlCarousel({
+    items:1,
     loop: true,
-    nav:false,
+    nav:true,
+    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+
     dots: true,
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
+    
+  });
+
+  $('.owl-projects').owlCarousel({
+ 
+    // items: 3,
+    margin: 20,
+    loop: true,
+    nav:true,
+    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    // responsiveClass: true,
+    responsive:{
+
+      480:{
+
+        items:1,
+      },
+      678:{
+
+          items:2,
+      },
+      960:{
+
+        items:3,
+    }
+
+    }
 
   });
+  $('.owl-projects-less3').owlCarousel({
+ 
+    // items: 2,
+    margin: 20,
+    loop: true,
+    nav:true,
+    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    // responsiveClass: true,
+    responsive:{
+
+      480:{
+
+        items:1,
+        autoplay:true,
+      },
+      678:{
+
+          items:2,
+      },
+      960:{
+
+        items:2,
+    }
+
+    }
+
+  });
+
 });
+
+
+
 

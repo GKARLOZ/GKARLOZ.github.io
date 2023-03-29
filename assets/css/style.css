@@ -157,7 +157,7 @@ body {
   font-family: var(--fontFamily-roboto);
   font-size: var(--fontSize-8);
   line-height: 1.75;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body.loaded { overflow-y: auto; }
@@ -838,7 +838,61 @@ body.nav-active { overflow: hidden; }
 
 .profile-card .card-subtitle { font-size: var(--fontSize-10); }
 
+/*-----------------------------------*\
+  #Testimonials Carousel
+\*-----------------------------------*/
+.carousel-wrapper {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  font-family: sans-serif;
+}
+.owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
+  
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #e00f7b;
+  
+}
 
+.owl-carousel .item {
+  text-align: center;
+
+}
+.owl-carousel .nav-button {
+  height: 50px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 110px !important;
+}
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.25;
+}
+.owl-carousel .owl-prev {
+  left: -35px;
+}
+.owl-carousel .owl-next {
+  right: -35px;
+}
+.owl-theme .owl-nav [class*=owl-] {
+  color: rgb(255, 255, 255);
+  font-size: 39px;
+  background: hsl(0, 0%, 0%);
+  border-radius: 3px;
+}
+.owl-carousel .prev-carousel:hover {
+  background-position: 0px -53px;
+}
+.owl-carousel .next-carousel:hover {
+  background-position: -24px -53px;
+}
 
 
 
@@ -1358,6 +1412,7 @@ textarea.input-field {
    */
 
   .slider-item { min-width: calc(33.33% - 20px); }
+
 
 
 

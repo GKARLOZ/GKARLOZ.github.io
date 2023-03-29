@@ -39,182 +39,305 @@
   <link rel="preload" as="image" href="/assets/images/hero-shape-1.png">
   <link rel="preload" as="image" href="/assets/images/hero-shape-2.png">
 
+  <!-- Carousel -->
+
+ <!-- Include the Owl Carousel CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+ <!-- Include the jQuery library -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <!-- Include the Owl Carousel JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
 </head>
-
-
-
-
 
 <body id="top">
     
 
- <!-- 
-    - #HEADER
-  -->
+  <!-- 
+      - #HEADER
+    -->
 
-  <header class="header" data-header>
-    <div class="container">
+    <header class="header" data-header>
+      <div class="container">
 
-      <a href="#" class="logo">
-       <h1>Gian´s Portfolio</h1>
-        <!-- <img src="./assets/images/logo.svg" width="84" height="26" alt="logo"> -->
-      </a>
+        <a href="#" class="logo">
+        <h1>Gian´s Portfolio</h1>
+          <!-- <img src="./assets/images/logo.svg" width="84" height="26" alt="logo"> -->
+        </a>
 
-      <nav class="navbar" data-navbar>
+        <nav class="navbar" data-navbar>
 
-        <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src= "./assets/images/logo.svg" width="84" height="26" alt="logo">
-          </a>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src= "./assets/images/logo.svg" width="84" height="26" alt="logo">
+            </a>
 
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
 
-        <ul class="navbar-list">
+          <ul class="navbar-list">
 
-          <li>
-            <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
-          </li>
+            <li>
+              <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
 
-          <li>
-            <a href="assets\Experience\experience.html" class="navbar-link" data-nav-link>Experience</a>
-          </li>
+            <li>
+              <a href="/assets\Experience\experience.html" class="navbar-link" data-nav-link>Experience</a>
+            </li>
 
-          <li>
-            <a href="#about" class="navbar-link" data-nav-link>About</a>
-          </li>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About</a>
+            </li>
 
-          <li>
-            <a href="/assets/Projects/projects.html" class="navbar-link" data-nav-link>Project</a>
-          </li>
+            <li>
+              <a href="/assets/Projects/projects.html" class="navbar-link" data-nav-link>Project</a>
+            </li>
 
-          <li>
-            <a href="#review" class="navbar-link" data-nav-link>Review</a>
-          </li>
+            <li>
+              <a href="#review" class="navbar-link" data-nav-link>Review</a>
+            </li>
 
-          <li>
-            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-          </li>
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+            </li>
 
-        </ul>
+          </ul>
 
-      </nav>
+        </nav>
 
-      <a href="#" class="btn btn:hover">
-        <span class="span">Get A Quote</span>
+        <a href="#" class="btn btn:hover">
+          <span class="span">Get A Quote</span>
 
-        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-      </a>
+          <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+        </a>
 
-      <button class="nav-open-btn btn:hover" aria-label="open menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-      </button>
+        <button class="nav-open-btn btn:hover" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </button>
 
-      <div class="overlay" data-overlay data-nav-toggler></div>
+        <div class="overlay" data-overlay data-nav-toggler></div>
 
-    </div>
-  </header>
+      </div>
+    </header>
+    <main>
+      <article>
 
 
-     <!-- 
-        - #PROJECTS
-      -->
 
-      <section class="section project" aria-label="my latest projects" id="project">
+      <!-- 
+          - #PROJECTS
+        -->
 
+        
+
+        <section class="section project " aria-label="my latest projects" id="project">
+          
+          <h2 class="title h2 section-title text-center" style="margin-top: 30px; margin-bottom: 30px;">
+            Java Projects</h2>
+
+          <ul class="slider-list">
+            
+            <div class="container owl-projects owl-carousel owl-theme">
+            
+              <li class="slider-item item">
+                <div class="project-card text-center">
+
+                  <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                    <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
+                      alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+
+                    <a href="#" class="btn btn:hover">
+                      <span class="span">Project Details</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle">Mario Game</p>
+
+                    <h3 class="title h3">
+                      <a href="#" class="card-title">Mario Breaking Bricks </a>
+                    </h3>
+                  </div>
+
+                </div>
+              </li>
+              <li class="slider-item item">
+                <div class="project-card text-center">
+
+                  <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                    <img src="/assets\images\fly_mario_homepage.png" width="1000" height="763" loading="lazy"
+                      alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+
+                    <a href="#" class="btn btn:hover">
+                      <span class="span">Project Details</span>
+                      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle">Flying Mario Game</p>
+
+                    <h3 class="title h3">
+                      <a href="#" class="card-title">Mario Fly towards Bowser </a>
+                    </h3>
+                  </div>
+
+                </div>
+              </li>
+            
+              <li class="slider-item item">
+                <div class="project-card text-center">
+
+                  <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                    <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
+                      alt="Project poster: Front End Development & Maintenance" class="img-cover">
+
+                    <a href="#" class="btn btn:hover">
+                      <span class="span">Project Details</span>
+
+                      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle">Desktop App </p>
+
+                    <h3 class="title h3">
+                      <a href="#" class="card-title"> Scheduling App </a>
+                    </h3>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="slider-item">
+                <div class="project-card text-center">
+
+                  <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                    <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
+                      alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
+
+                    <a href="#" class="btn btn:hover">
+                      <span class="span">Project Details</span>
+
+                      <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                    </a>
+                  </div>
+
+                  <div class="card-content">
+                    <p class="card-subtitle">Desktop App</p>
+
+                    <h3 class="title h3">
+                      <a href="#" class="card-title"> Inventory Management System</a>
+                    </h3>
+                  </div>
+
+                </div>
+              </li>
+                
+            </div> 
+          </ul>
+      </section>
+      <!-- Setion 2  -->
+      <section class="section project " aria-label="my latest projects" id="project">
+        <h2 class="title h2 section-title text-center" style="margin-top: 30px; margin-bottom: 30px;">
+          Python Projects</h2>
         <ul class="slider-list">
+          
+          <div class="container owl-projects-less3 owl-carousel owl-theme">
+          
+            <li class="slider-item item">
+              <div class="project-card text-center">
 
-          <li class="slider-item">
-            <div class="project-card text-center">
+                <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                  <img src="/assets\images\python_project1.png" width="1000" height="763" loading="lazy"
+                    alt="Project poster: Creative & experienced digital design studio" class="img-cover">
 
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+                  <a href="#" class="btn btn:hover">
+                    <span class="span">Project Details</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
 
-                <a href="#" class="btn btn:hover">
-                  <span class="span">Project Details</span>
+                <div class="card-content">
+                  <p class="card-subtitle">Pick A movie</p>
 
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
+                  <h3 class="title h3">
+                    <a href="#" class="card-title">Movie Recommender </a>
+                  </h3>
+                </div>
+
               </div>
+            </li>
+            <li class="slider-item item">
+              <div class="project-card text-center">
 
-              <div class="card-content">
-                <p class="card-subtitle">Mario, Java Game</p>
+                <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                  <img src="/assets\images\python_project2.png" width="1000" height="763" loading="lazy"
+                    alt="Project poster: Creative & experienced digital design studio" class="img-cover">
 
-                <h3 class="title h3">
-                  <a href="#" class="card-title">Mario Breaking Bricks </a>
-                </h3>
+                  <a href="#" class="btn btn:hover">
+                    <span class="span">Project Details</span>
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+                  <p class="card-subtitle">NearesNeighberAlgo</p>
+
+                  <h3 class="title h3">
+                    <a href="#" class="card-title">Package Deliver</a>
+                  </h3>
+                </div>
+
               </div>
-
-            </div>
-          </li>
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Front End Development & Maintenance" class="img-cover">
-
-                <a href="#" class="btn btn:hover">
-                  <span class="span">Project Details</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Desktop App, Java </p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title"> Scheduling application </a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
-
-          <li class="slider-item">
-            <div class="project-card text-center">
-
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
-
-                <a href="#" class="btn btn:hover">
-                  <span class="span">Project Details</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Desktop App, Java</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title"> Inventory Management System</a>
-                </h3>
-              </div>
-
-            </div>
-          </li>
+            </li>
+          
+            
+              
+          </div> 
         </ul>
-
     </section>
-
-
-       <!-- 
-        - #PROJECTS
-      -->
-
+     <!--Section 3  -->
     <section class="section project " aria-label="my latest projects" id="project">
+      <h2 class="title h2 section-title text-center" style="margin-top: 30px; margin-bottom: 30px;">
+        JavaScript</h2>
+      <ul class="slider-list">
+        
+        <div class="container owl-projects-less3 owl-carousel owl-theme">
+        
+          <li class="slider-item item">
+            <div class="project-card text-center">
 
-        <ul class="slider-list">
+              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+                <img src="/assets\images\javascript_project1.png" width="1000" height="763" loading="lazy"
+                  alt="Project poster: Creative & experienced digital design studio" class="img-cover">
 
-          <li class="slider-item">
+                <a href="#" class="btn btn:hover">
+                  <span class="span">Project Details</span>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+                <p class="card-subtitle">Html, CSS</p>
+
+                <h3 class="title h3">
+                  <a href="#" class="card-title">Calculator </a>
+                </h3>
+              </div>
+
+            </div>
+          </li>
+          <li class="slider-item item">
             <div class="project-card text-center">
 
               <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
@@ -223,7 +346,6 @@
 
                 <a href="#" class="btn btn:hover">
                   <span class="span">Project Details</span>
-
                   <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                 </a>
               </div>
@@ -238,74 +360,140 @@
 
             </div>
           </li>
+            
+        </div> 
+      </ul>
+  </section> 
+  <!--Section 4  -->
+  <section class="section project " aria-label="my latest projects" id="project">
+    <h2 class="title h2 section-title text-center" style="margin-top: 30px; margin-bottom: 30px;">
+      Wordpress Websites</h2>
+    <ul class="slider-list">
+      
+      <div class="container owl-projects owl-carousel owl-theme">
+      
+        <li class="slider-item item">
+          <div class="project-card text-center">
 
-          <li class="slider-item">
-            <div class="project-card text-center">
+            <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+              <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
+                alt="Project poster: Creative & experienced digital design studio" class="img-cover">
 
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Front End Development & Maintenance" class="img-cover">
-
-                <a href="#" class="btn btn:hover">
-                  <span class="span">Project Details</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Desktop App, Java </p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title"> Scheduling application </a>
-                </h3>
-              </div>
-
+              <a href="#" class="btn btn:hover">
+                <span class="span">Project Details</span>
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
             </div>
-          </li>
 
-          <li class="slider-item">
-            <div class="project-card text-center">
+            <div class="card-content">
+              <p class="card-subtitle">Mario, Java Game</p>
 
-              <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
-                <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
-                  alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
-
-                <a href="#" class="btn btn:hover">
-                  <span class="span">Project Details</span>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-              </div>
-
-              <div class="card-content">
-                <p class="card-subtitle">Desktop App, Java</p>
-
-                <h3 class="title h3">
-                  <a href="#" class="card-title"> Inventory Management System</a>
-                </h3>
-              </div>
-
+              <h3 class="title h3">
+                <a href="#" class="card-title">Mario Breaking Bricks </a>
+              </h3>
             </div>
-          </li>
-        </ul>
 
-    </section>
+          </div>
+        </li>
+        <li class="slider-item item">
+          <div class="project-card text-center">
+
+            <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+              <img src="/assets/images/mario_b_homepage.png" width="1000" height="763" loading="lazy"
+                alt="Project poster: Creative & experienced digital design studio" class="img-cover">
+
+              <a href="#" class="btn btn:hover">
+                <span class="span">Project Details</span>
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+            <div class="card-content">
+              <p class="card-subtitle">Mario, Java Game</p>
+
+              <h3 class="title h3">
+                <a href="#" class="card-title">Mario Breaking Bricks </a>
+              </h3>
+            </div>
+
+          </div>
+        </li>
+      
+        <li class="slider-item item">
+          <div class="project-card text-center">
+
+            <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+              <img src="/assets\images\sch_app_homepage.png" width="1000" height="763" loading="lazy"
+                alt="Project poster: Front End Development & Maintenance" class="img-cover">
+
+              <a href="#" class="btn btn:hover">
+                <span class="span">Project Details</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+            <div class="card-content">
+              <p class="card-subtitle">Desktop App, Java </p>
+
+              <h3 class="title h3">
+                <a href="#" class="card-title"> Scheduling application </a>
+              </h3>
+            </div>
+
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="project-card text-center">
+
+            <div class="card-banner img-holder has-before" style="--width: 1000; --height: 763;">
+              <img src="/assets\images\IMS(MainPanel).png" width="1000" height="763" loading="lazy"
+                alt="Project poster: Flutter Framework & Warframe Design" class="img-cover">
+
+              <a href="#" class="btn btn:hover">
+                <span class="span">Project Details</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+            <div class="card-content">
+              <p class="card-subtitle">Desktop App, Java</p>
+
+              <h3 class="title h3">
+                <a href="#" class="card-title"> Inventory Management System</a>
+              </h3>
+            </div>
+
+          </div>
+        </li>
+          
+      </div> 
+    </ul>
+</section> 
 
 
- <!-- 
-    - #CUSTOM CURSOR
-  -->
-
-  <div class="cursor-dot" data-cursor></div>
-  <div class="cursor-outline" data-cursor></div>
+    </article>
+  </main>
 
 
+  <!-- 
+      - #CUSTOM CURSOR
+    -->
 
-<!-- 
-    - custom js link
-  -->
-  <script src="/assets/js/script.js"> </script>
+    <div class="cursor-dot" data-cursor></div>
+    <div class="cursor-outline" data-cursor></div>
+
+
+
+  <!-- 
+      - custom js link
+    -->
+    <script src="/assets/js/script.js"> </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 </body>
 
