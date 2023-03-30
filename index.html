@@ -40,23 +40,18 @@
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
  <!-- Carousel -->
 
- <!-- Include the Owl Carousel CSS -->
+ <!-- Owl Carousel CSS (Testimonial section) -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
- <!-- Include the jQuery library -->
+ <!-- jQuery library for owl carousel (Testimonial section) -->
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
- <!-- Include the Owl Carousel JavaScript -->
+ <!-- Owl Carousel JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
- <!-- testing -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
-        <!-- Update these with your own fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet"> 
+ <!-- Footer Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
         
 
 
@@ -786,7 +781,7 @@
   
               <div class="profile-card">
                 <figure class="card-banner img-holder" style="--width: 70; --height: 70;">
-                  <img src="assets\images\kent_johnson_linkedin.jfif" width="70" height="70" loading="lazy" alt="Alexis browni JR."
+                  <img src="/assets\images\kent_johnson_linkedin.jfif" width="70" height="70" loading="lazy" alt="Alexis browni JR."
                     class="img-cover">
                 </figure>
   
@@ -812,7 +807,7 @@
 
             <div class="profile-card">
               <figure class="card-banner img-holder" style="--width: 70; --height: 70;">
-                <img src="assets\images\Jerome_Dodd_linkedin.jfif" width="70" height="70" loading="lazy" alt="Alexis browni JR."
+                <img src="/assets\images\Jerome_Dodd_linkedin.jfif" width="70" height="70" loading="lazy" alt="Alexis browni JR."
                   class="img-cover">
               </figure>
 
@@ -929,21 +924,30 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
-    <div class="container">
+  <footer class="footer" style="text-align: center; padding-top: 20px; padding-bottom: 20px;"  >
+    
+    <a href="mailto:gianbustos04@gmail.com" class="footer__link">GianBustos04@gmail.com</a>
+    <ul class="social-list container"  >
+      
+        <li class="social-list__item">
+            <a class="social-list-experience" href="https://www.linkedin.com/in/giancarlo-bustos-578a9318a/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://github.com/GKARLOZ">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://codepen.io/mars71/pens/public">
+                <i class="fab fa-codepen"></i>
 
-      <p class="copyright">
-        Copyright & Design By @codewithsadee - 2022
-      </p>
 
-      <a href="#top" class="back-top-btn">
-        <span class="span">Back To Top</span>
-
-        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
-      </a>
-
-    </div>
-  </footer>
+            </a>
+        </li>
+    </ul>
+</footer>
   
 
 
