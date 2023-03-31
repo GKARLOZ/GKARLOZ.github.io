@@ -26,7 +26,8 @@
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(0, 0%, 19%) 97%,
+    
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
@@ -74,7 +75,10 @@
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  /* --ff-poppins: 'Poppins', sans-serif; */
+
+  --fontFamily-recoleta: 'Recoleta';
+  --fontFamily-roboto: 'Roboto', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -796,7 +800,8 @@ main {
 }
 
 .timeline-list span {
-  color: var(--vegas-gold);
+  /* color: var(--vegas-gold); */
+  color: grey;
   font-weight: var(--fw-400);
   line-height: 1.6;
 }
@@ -818,7 +823,8 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  /* background: var(--text-gradient-yellow); */
+  background: grey;
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -862,7 +868,8 @@ main {
 }
 
 .skill-progress-fill {
-  background: var(--text-gradient-yellow);
+  background: white; 
+  /* background: var(--text-gradient-yellow); */
   height: 100%;
   border-radius: inherit;
 }
